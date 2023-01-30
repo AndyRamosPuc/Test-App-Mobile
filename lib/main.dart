@@ -1,5 +1,6 @@
-
 import 'package:flutter/material.dart';
+import 'package:slider_carousel/Screens/ScreenCarne.dart';
+import 'package:slider_carousel/Screens/ScreenCarne.dart';
 
 import 'homepage.dart';
 
@@ -10,14 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        
-        body: Center(
-          child: HomePage(),
-          ),
-        ),
-      );
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Better Food',
+      initialRoute: 'home',
+      routes: {
+        'home': (BuildContext context) => const HomePage(),
+        'CategoriaCarne': (_) => ScreenCarne()
+      },
+    );
   }
 }
